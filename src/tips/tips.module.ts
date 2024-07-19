@@ -1,9 +1,14 @@
 import { Module } from '@nestjs/common';
-import { TipsController } from './tips.controller';
 import { TipsService } from './tips.service';
+import { TipsController } from './tips.controller';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Tip } from './entities/tips.entity';
+import { Genre } from 'src/genres/entities/genres.entity';
+import { Level } from 'src/levels/entities/levels.entity';
 
 @Module({
+  imports: [TypeOrmModule.forFeature([Tip, Genre, Level])],
   controllers: [TipsController],
-  providers: [TipsService]
+  providers: [TipsService],
 })
 export class TipsModule {}
