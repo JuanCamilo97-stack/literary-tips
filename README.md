@@ -22,15 +22,52 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+
+Literary Tips API
+"Literary Tips" es una API creada con NestJS que permite gestionar tips literarios. Las funcionalidades incluyen crear, actualizar, eliminar (soft delete), y consultar tips con filtros por tipo y nivel.
+
 ## Description
+Literary Tips API
+"Literary Tips" es una API creada con NestJS que permite gestionar tips literarios. Las funcionalidades incluyen crear, actualizar, eliminar (soft delete), y consultar tips con filtros por tipo y nivel.
+
+Descripción
+Este proyecto es una API RESTful que permite:
+
+Crear un tip
+Actualizar un tip
+Eliminar un tip (soft delete)
+Consultar todos los tips paginados
+Consultar un tip filtrado por tipo (filosofía, ciencia y tecnología)
+Consultar un tip filtrado por nivel (básico, medio, avanzado)
+Poblar la base de datos con al menos 20 tips diversos
+La API utiliza una base de datos PostgreSQL y TypeORM para la gestión de datos.
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
 
+
 ```bash
+git clone 
+$ https://github.com/tu-usuario/literary-tips.git
+cd literary-tips
+```
+
+
+
+```bash
+Instalar las dependencias
 $ npm install
 ```
+```bash
+Crear un archivo .env en la raíz del proyecto con la siguiente configuración:
+DB_HOST="ep-blue-shadow-a4ylsr2t-pooler.us-east-1.aws.neon.tech"
+DB_PORT=5432
+DB_USER="default"
+DB_PASSWORD="bqhPY1aTr9sD"
+DB_NAME="verceldb"
+```
+
 
 ## Running the app
 
@@ -58,15 +95,62 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## structure
 
+```bash
+Estructura del Proyecto
+El proyecto está estructurado en módulos para una mejor organización:
+
+Tips: Gestión de tips literarios.
+Levels: Gestión de niveles (básico, medio, avanzado).
+Genres: Gestión de géneros (filosofía, ciencia, tecnología).
+
+Endpoints
+Tips
+POST /tips: Crear un nuevo tip.
+GET /tips: Obtener todos los tips paginados.
+GET /tips/
+: Obtener un tip por ID.
+PATCH /tips/
+: Actualizar un tip por ID.
+DELETE /tips/
+: Eliminar un tip por ID (soft delete).
+Levels
+POST /levels: Crear un nuevo nivel.
+GET /levels: Obtener todos los niveles paginados.
+GET /levels/
+: Obtener un nivel por ID.
+PATCH /levels/
+: Actualizar un nivel por ID.
+DELETE /levels/
+: Eliminar un nivel por ID (soft delete).
+Genres
+POST /genres: Crear un nuevo género.
+GET /genres: Obtener todos los géneros paginados.
+GET /genres/
+: Obtener un género por ID.
+PATCH /genres/
+: Actualizar un género por ID.
+DELETE /genres/
+: Eliminar un género por ID (soft delete).
+```
+## Support
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+
+Si necesitas ayuda, por favor abre un issue en el repositorio o contacta al autor.
 
 ## Stay in touch
 
 - Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
+
+
+## Author
+```bash
+Juan Camilo Atehortua Herrera
+Email juanatehortua97@gmail.com
+```
 
 ## License
 
