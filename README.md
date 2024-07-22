@@ -49,8 +49,13 @@ La API utiliza una base de datos PostgreSQL y TypeORM para la gestión de datos.
 
 ```bash
 git clone 
-$ https://github.com/tu-usuario/literary-tips.git
+$ https://github.com/JuanCamilo97-stack/literary-tips.git
 cd literary-tips
+
+```
+
+```bash
+render https://literary-tips.onrender.com/api/swagger
 ```
 
 
@@ -61,11 +66,11 @@ $ npm install
 ```
 ```bash
 Crear un archivo .env en la raíz del proyecto con la siguiente configuración:
-DB_HOST="ep-blue-shadow-a4ylsr2t-pooler.us-east-1.aws.neon.tech"
-DB_PORT=5432
-DB_USER="default"
-DB_PASSWORD="bqhPY1aTr9sD"
-DB_NAME="verceldb"
+DB_HOST=""
+DB_PORT=
+DB_USER=""
+DB_PASSWORD=""
+DB_NAME=""
 ```
 
 
@@ -141,7 +146,7 @@ Si necesitas ayuda, por favor abre un issue en el repositorio o contacta al auto
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
