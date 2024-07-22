@@ -30,14 +30,14 @@ export class TipsService {
       skip,
       take: limit,
       where: { deletedAt: null },
-      relations: ['genres', 'levels'],
+      relations: ['genres', 'level'],
     });
   }
 
   findOne(id: number) {
     return this.tipRepository.findOne({
       where: { id },
-      relations: ['genres', 'levels'],
+      relations: ['genres', 'level'],
     });
   }
   
